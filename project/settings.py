@@ -1,20 +1,17 @@
 import os
 
-from dotenv import load_dotenv
-load_dotenv()
-
 from environs import Env
 env = Env()
 env.read_env()
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'HOST': 'checkpoint.devman.org',
-        'PORT': '5434',
-        'NAME': 'checkpoint',
-        'USER': 'guard',
-        'PASSWORD': 'osim5',
+        'ENGINE': env.str('ENGINE'),
+        'HOST': env.str('HOST'),
+        'PORT': env.str('PORT'),
+        'NAME': env.str('NAME'),
+        'USER': env.str('USER'),
+        'PASSWORD': env.str('PASSWORD'),
     }
 }
 
