@@ -6,20 +6,20 @@ env.read_env()
 
 DATABASES = {
     'default': {
-        'ENGINE': env.str('ENGINE'),
-        'HOST': env.str('HOST'),
-        'PORT': env.str('PORT'),
-        'NAME': env.str('NAME'),
-        'USER': env.str('USER'),
-        'PASSWORD': env.str('PASSWORD'),
+        'ENGINE': env.str("ENGINE"),
+        'HOST': env.str("HOST"),
+        'PORT': env.str("PORT"),
+        'NAME': env.str("NAME"),
+        'USER': env.str("USER"),
+        'PASSWORD': env.str("PASSWORD"),
     }
 }
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = env.str("secret_key")
+SECRET_KEY = env.str("SECRET_KEY")
 
-DEBUG = env.bool("debug")
+DEBUG = env.bool("DEBUG")
 
 ROOT_URLCONF = "project.urls"
 
